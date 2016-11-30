@@ -71,7 +71,7 @@ Please help better the ecosystem by submitting issues and pull requests to defau
 You'll find more detailed information on using `ethjs-provider-http` and tailoring it to your needs in our guides:
 
 - [User guide](docs/user-guide.md) - Usage, configuration, FAQ and complementary tools.
-- [Developer guide](docs/developer-guide.md) - Contributing to `ethjs-provider-http` and writing your own plugins & formatters.
+- [Developer guide](docs/developer-guide.md) - Contributing to `ethjs-provider-http` and writing your own code and coverage.
 
 ## Help out
 
