@@ -66,14 +66,12 @@ A simple provider module for the HTTP protocol that follows the web3 provider sp
 
 Please help better the ecosystem by submitting issues and pull requests to default. We need all the help we can get to build the absolute best linting standards and utilities. We follow the AirBNB linting standard and the unix philosophy.
 
-<!--
 ## Guides
 
 You'll find more detailed information on using default and tailoring it to your needs in our guides:
 
 - [User guide](docs/user-guide.md) - Usage, configuration, FAQ and complementary tools.
 - [Developer guide](docs/developer-guide.md) - Contributing to wafr and writing your own plugins & formatters.
--->
 
 ## Help out
 
