@@ -31,10 +31,10 @@ Intakes a `provider` URL specified as a string, and optionally the `timeout` spe
 
 **Parameters**
 
--   `provider` **String** the URL path to your Http RPC Ethereum node (e.g. `http://localhost:8545`) or a service node (e.g. `http://ropsten.infura.io`).
+-   `provider` **String** the URL path to your local Http RPC enabled Ethereum node (e.g. `http://localhost:8545`) or a service node system like [Infura.io](http://infura.io) (e.g. `http://ropsten.infura.io`).
 -   `timeout` **Number** [optional] the time in seconds that an XHR2 request will wait until it times out.
 
-Result HttpProvider **Object**.
+Result `HttpProvider` **Object**.
 
 ```js
 const Eth = require('ethjs-query');
@@ -50,12 +50,12 @@ eth.accounts((err, result) => {
 
  - [web3.js](https://github.com/ethereum/web3.js) -- the original Ethereum swiss army knife **Ethereum Foundation**
  - [ethereumjs](https://github.com/ethereumjs) -- critical ethereumjs infrastructure **Ethereum Foundation**
+ - [browser-solidity](https://ethereum.github.io/browser-solidity) -- an in browser Solidity IDE **Ethereum Foundation**
  - [wafr](https://github.com/silentcicero/wafr) -- a super simple Solidity testing framework
- - [Truffle](https://github.com/ConsenSys/truffle) -- a solidity/js dApp framework
- - [Embark](https://github.com/iurimatias/embark-framework) -- a solidity/js dApp framework
+ - [truffle](https://github.com/ConsenSys/truffle) -- a solidity/js dApp framework
+ - [embark](https://github.com/iurimatias/embark-framework) -- a solidity/js dApp framework
  - [dapple](https://github.com/nexusdev/dapple) -- a solidity dApp framework
  - [chaitherium](https://github.com/SafeMarket/chaithereum) -- a JS web3 unit testing framework
- - [browser-solidity](https://ethereum.github.io/browser-solidity) -- an in browser Solidity IDE **Ethereum Foundation**
  - [contest](https://github.com/DigixGlobal/contest) -- a JS testing framework for contracts
 
 ## Our Relationship with Ethereum & EthereumJS

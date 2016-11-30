@@ -68,10 +68,10 @@ Please help better the ecosystem by submitting issues and pull requests to defau
 
 ## Guides
 
-You'll find more detailed information on using default and tailoring it to your needs in our guides:
+You'll find more detailed information on using `ethjs-provider-http` and tailoring it to your needs in our guides:
 
 - [User guide](docs/user-guide.md) - Usage, configuration, FAQ and complementary tools.
-- [Developer guide](docs/developer-guide.md) - Contributing to wafr and writing your own plugins & formatters.
+- [Developer guide](docs/developer-guide.md) - Contributing to `ethjs-provider-http` and writing your own plugins & formatters.
 
 ## Help out
 
