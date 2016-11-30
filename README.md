@@ -60,7 +60,7 @@ eth.getBlockByNumber(45039930, cb);
 
 ## About
 
-A simple provider module for the HTTP protocol that follows the web3 provider specification.
+A simple provider module for the HTTP protocol that follows the web3 provider specification. This is purely an HTTP bypass using the XHR2 module.
 
 ## Contributing
 
