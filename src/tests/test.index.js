@@ -37,8 +37,10 @@ FakeXHR2.prototype.send = function (payload) { // eslint-disable-line
 
   if (payloadParsed.forceTimeout === true) {
     setTimeout(() => {
-      self.onreadystatechange();
+      self.ontimeout();
     }, 2000);
+  } else if (payloadParsed.invalidSend === true) {
+    throw new Error('invalid data!!!');
   } else if (payloadParsed.invalidJSON === true) {
     self.responseText = 'dsfsfd{sdf}';
     self.onreadystatechange();
@@ -233,7 +235,9 @@ describe('HttpProvider', () => {
       it('should send basic async request and timeout', (done) => {
         const provider = new FakeHttpProvider('http://localhost:4000', 2);
 
-        provider.sendAsync({ forceTimeout: true }, () => {
+        provider.sendAsync({ forceTimeout: true }, (err, result) => {
+          assert.equal(typeof err, 'string');
+          assert.equal(typeof result, 'object');
           done();
         });
       });
@@ -241,11 +245,21 @@ describe('HttpProvider', () => {
 
     describe('invalid payload', () => {
       it('should throw an error as its not proper json', (done) => {
-        const provider = new HttpProvider('http://localhost:4000');
+        const provider = new FakeHttpProvider('http://localhost:4000');
 
         provider.sendAsync('sdfsds{}{df()', (err, result) => {
-          assert.equal(typeof err, 'object');
-          assert.equal(typeof result, 'string');
+          assert.equal(typeof err, 'string');
+          assert.equal(typeof result, 'object');
+          done();
+        });
+      });
+
+      it('should throw an error as its not proper json', (done) => {
+        const provider = new FakeHttpProvider('http://localhost:4000');
+
+        provider.sendAsync({ invalidSend: true }, (err, result) => {
+          assert.equal(typeof err, 'string');
+          assert.equal(typeof result, 'object');
           done();
         });
       });
