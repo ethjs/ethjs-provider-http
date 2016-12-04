@@ -37,14 +37,30 @@ Intakes a `provider` URL specified as a string, and optionally the `timeout` spe
 Result `HttpProvider` **Object**.
 
 ```js
-const Eth = require('ethjs-query');
 const HttpProvider = require('ethjs-provider-http');
+const Eth = require('ethjs-query');
 const eth = new Eth(new HttpProvider('http://localhost:8545'));
 
 eth.accounts((err, result) => {
   // result null ['0xd89b8a74c153f0626497bc4a531f702...', ...]
 });
 ```
+
+## Browser Builds
+
+`ethjs` provides production distributions for all of its modules that are ready for use in the browser right away. Simply include either `dist/ethjs-provider-http.js` or `dist/ethjs-provider-http.min.js` directly into an HTML file to start using this module. Note, an `HttpProvider` object is made available globally.
+
+```html
+<script type="text/javascript" src="ethjs-provider-http.min.js"></script>
+<script type="text/javascript">
+new HttpProvider(...);
+</script>
+```
+
+Note, even though `ethjs` should have transformed and polyfilled most of the requirements to run this module across most modern browsers. You may want to look at an additional polyfill for extra support.
+
+Use a polyfill service such as `Polyfill.io` to ensure complete cross-browser support:
+https://polyfill.io/
 
 ## Other Awesome Modules, Tools and Frameworks
 

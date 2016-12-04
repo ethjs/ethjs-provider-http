@@ -13,7 +13,7 @@ const XHR2 = require('xhr2'); // jshint ignore: line
  * InvalidResponseError helper for invalid errors.
  */
 function invalidResponseError(result, host) {
-  const message = !!result && !!result.error && !!result.error.message ? `[ethjs-provider-http error] ${result.error.message}` : `[ethjs-provider-http error] Invalid JSON RPC response from host provider ${host}: ${JSON.stringify(result, null, 2)}`;
+  const message = !!result && !!result.error && !!result.error.message ? `[ethjs-provider-http] ${result.error.message}` : `[ethjs-provider-http] Invalid JSON RPC response from host provider ${host}: ${JSON.stringify(result, null, 2)}`;
   return new Error(message);
 }
 
@@ -21,8 +21,8 @@ function invalidResponseError(result, host) {
  * HttpProvider should be used to send rpc calls over http
  */
 function HttpProvider(host, timeout) {
-  if (!(this instanceof HttpProvider)) { throw new Error('[ethjs-provider-http error] the HttpProvider instance requires the "new" flag in order to function normally (e.g. `const eth = new Eth(new HttpProvider());`).'); }
-  if (typeof host !== 'string') { throw new Error('[ethjs-provider-http error] the HttpProvider instance requires that the host be specified (e.g. `new HttpProvider("http://localhost:8545")` or via service like infura `new HttpProvider("http://ropsten.infura.io")`)'); }
+  if (!(this instanceof HttpProvider)) { throw new Error('[ethjs-provider-http] the HttpProvider instance requires the "new" flag in order to function normally (e.g. `const eth = new Eth(new HttpProvider());`).'); }
+  if (typeof host !== 'string') { throw new Error('[ethjs-provider-http] the HttpProvider instance requires that the host be specified (e.g. `new HttpProvider("http://localhost:8545")` or via service like infura `new HttpProvider("http://ropsten.infura.io")`)'); }
 
   const self = this;
   self.host = host;

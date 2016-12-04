@@ -4,8 +4,8 @@ const Eth = require('ethjs-query'); // eslint-disable-line
 const EthQuery = require('eth-query');
 const Web3 = require('web3');
 const assert = require('chai').assert; // eslint-disable-line
-const server = TestRPC.server();
 const SandboxedModule = require('sandboxed-module');
+const server = TestRPC.server();
 server.listen(4000);
 
 function FakeXHR2() {
