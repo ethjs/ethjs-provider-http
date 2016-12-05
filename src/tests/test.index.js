@@ -6,7 +6,7 @@ const Web3 = require('web3');
 const assert = require('chai').assert; // eslint-disable-line
 const SandboxedModule = require('sandboxed-module');
 const server = TestRPC.server();
-server.listen(4000);
+server.listen(5002);
 
 function FakeXHR2() {
   const self = this;
@@ -73,8 +73,8 @@ describe('HttpProvider', () => {
     });
 
     it('should construct normally under valid conditions', () => {
-      const provider = new HttpProvider('http://localhost:4000', 10);
-      assert.equal(provider.host, 'http://localhost:4000');
+      const provider = new HttpProvider('http://localhost:5002', 10);
+      assert.equal(provider.host, 'http://localhost:5002');
       assert.equal(provider.timeout, 10);
     });
 
@@ -94,7 +94,7 @@ describe('HttpProvider', () => {
   });
 
   describe('test against ethjs-query', () => {
-    const eth = new Eth(new HttpProvider('http://localhost:4000')); // eslint-disable-line
+    const eth = new Eth(new HttpProvider('http://localhost:5002')); // eslint-disable-line
 
     it('should get accounts', (done) => {
       eth.accounts((accountsError, accountsResult) => {
@@ -139,7 +139,7 @@ describe('HttpProvider', () => {
   });
 
   describe('test against eth-query', () => {
-    const query = new EthQuery(new HttpProvider('http://localhost:4000')); // eslint-disable-line
+    const query = new EthQuery(new HttpProvider('http://localhost:5002')); // eslint-disable-line
 
     it('should get accounts', (done) => {
       query.accounts((accountsError, accountsResult) => {
@@ -182,7 +182,7 @@ describe('HttpProvider', () => {
   });
 
   describe('test against web3', () => {
-    const web3 = new Web3(new HttpProvider('http://localhost:4000')); // eslint-disable-line
+    const web3 = new Web3(new HttpProvider('http://localhost:5002')); // eslint-disable-line
 
     it('should get accounts', (done) => {
       web3.eth.getAccounts((accountsError, accountsResult) => {
@@ -233,7 +233,7 @@ describe('HttpProvider', () => {
   describe('web3 FakeProvider', () => {
     describe('sendAsync timeout', () => {
       it('should send basic async request and timeout', (done) => {
-        const provider = new FakeHttpProvider('http://localhost:4000', 2);
+        const provider = new FakeHttpProvider('http://localhost:5002', 2);
 
         provider.sendAsync({ forceTimeout: true }, (err, result) => {
           assert.equal(typeof err, 'string');
@@ -245,7 +245,7 @@ describe('HttpProvider', () => {
 
     describe('invalid payload', () => {
       it('should throw an error as its not proper json', (done) => {
-        const provider = new FakeHttpProvider('http://localhost:4000');
+        const provider = new FakeHttpProvider('http://localhost:5002');
 
         provider.sendAsync('sdfsds{}{df()', (err, result) => {
           assert.equal(typeof err, 'string');
@@ -255,7 +255,7 @@ describe('HttpProvider', () => {
       });
 
       it('should throw an error as its not proper json', (done) => {
-        const provider = new FakeHttpProvider('http://localhost:4000');
+        const provider = new FakeHttpProvider('http://localhost:5002');
 
         provider.sendAsync({ invalidSend: true }, (err, result) => {
           assert.equal(typeof err, 'string');
@@ -267,7 +267,7 @@ describe('HttpProvider', () => {
 
     describe('sendAsync timeout', () => {
       it('should send basic async request and timeout', (done) => {
-        const provider = new FakeHttpProvider('http://localhost:4000', 2);
+        const provider = new FakeHttpProvider('http://localhost:5002', 2);
 
         provider.sendAsync({ invalidJSON: true }, (err, result) => {
           assert.equal(typeof err, 'object');
@@ -279,7 +279,7 @@ describe('HttpProvider', () => {
 
     describe('sendAsync', () => {
       it('should send basic async request', (done) => {
-        const provider = new FakeHttpProvider('http://localhost:4000');
+        const provider = new FakeHttpProvider('http://localhost:5002');
 
         provider.sendAsync({}, (err, result) => {
           assert.equal(typeof result, 'object');
