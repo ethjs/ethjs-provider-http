@@ -60,6 +60,11 @@ const FakeHttpProvider = SandboxedModule.require('../index.js', {
 
 describe('HttpProvider', () => {
   describe('constructor', () => {
+    it('should throw under invalid conditions', () => {
+      assert.throws(() => HttpProvider(''), Error); // eslint-disable-line
+      assert.throws(() => new HttpProvider({}, 3932), Error); // eslint-disable-line
+    });
+
     it('should construct normally under valid conditions', () => {
       const provider = new HttpProvider('http://localhost:8545');
       assert.equal(provider.host, 'http://localhost:8545');

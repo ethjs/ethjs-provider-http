@@ -56,6 +56,13 @@ The build staging for this module is as follows:
  7. Retest lib folder for babel processing solidity
  8. Report build stats
 
+## Webpack
+
+`ethjs` uses webpack across all its browser focused repos. Webpack is used to package down project files into distribution builds for the browser. You can see the builds it produces by going to the [dist](dist) folder.
+
+Read more about webpack here:
+https://github.com/webpack/docs
+
 ## Folder Structure
 
 All module source code is found in the `src` directory. All module helper scripts can be found in the `scripts` folder. These will not need to be touched, and are purely configuration for this repository.

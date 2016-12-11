@@ -7,7 +7,7 @@
  */
 
 // workaround to use httpprovider in different envs
-const XHR2 = require('xhr2'); // jshint ignore: line
+const XHR2 = require('xhr2');
 
 /**
  * InvalidResponseError helper for invalid errors.

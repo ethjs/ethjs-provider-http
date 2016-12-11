@@ -62,17 +62,51 @@ Note, even though `ethjs` should have transformed and polyfilled most of the req
 Use a polyfill service such as `Polyfill.io` to ensure complete cross-browser support:
 https://polyfill.io/
 
+## Latest Webpack Figures
+
+```
+
+Hash: 19a6a35da5b5795d31b4                                                         
+Version: webpack 2.1.0-beta.15
+Time: 777ms
+                     Asset     Size  Chunks             Chunk Names
+    ethjs-provider-http.js  5.43 kB       0  [emitted]  main
+ethjs-provider-http.js.map   6.1 kB       0  [emitted]  main
+   [2] multi main 28 bytes {0} [built]
+    + 2 hidden modules
+
+Hash: 04c4c298f25fbf6d2da8                                                         
+Version: webpack 2.1.0-beta.15
+Time: 733ms
+                     Asset     Size  Chunks             Chunk Names
+ethjs-provider-http.min.js  2.11 kB       0  [emitted]  main
+   [2] multi main 28 bytes {0} [built]
+    + 2 hidden modules
+```
+
 ## Other Awesome Modules, Tools and Frameworks
 
- - [web3.js](https://github.com/ethereum/web3.js) -- the original Ethereum swiss army knife **Ethereum Foundation**
- - [ethereumjs](https://github.com/ethereumjs) -- critical ethereumjs infrastructure **Ethereum Foundation**
+### Foundation
+ - [web3.js](https://github.com/ethereum/web3.js) -- the original Ethereum JS swiss army knife **Ethereum Foundation**
+ - [ethereumjs](https://github.com/ethereumjs) -- critical ethereum javascript infrastructure **Ethereum Foundation**
  - [browser-solidity](https://ethereum.github.io/browser-solidity) -- an in browser Solidity IDE **Ethereum Foundation**
+
+### Nodes
+  - [geth](https://github.com/ethereum/go-ethereum) Go-Ethereum
+  - [parity](https://github.com/ethcore/parity) Rust-Ethereum build in Rust
+  - [testrpc](https://github.com/ethereumjs/testrpc) Testing Node (ethereumjs-vm)
+
+### Testing
  - [wafr](https://github.com/silentcicero/wafr) -- a super simple Solidity testing framework
  - [truffle](https://github.com/ConsenSys/truffle) -- a solidity/js dApp framework
  - [embark](https://github.com/iurimatias/embark-framework) -- a solidity/js dApp framework
  - [dapple](https://github.com/nexusdev/dapple) -- a solidity dApp framework
  - [chaitherium](https://github.com/SafeMarket/chaithereum) -- a JS web3 unit testing framework
  - [contest](https://github.com/DigixGlobal/contest) -- a JS testing framework for contracts
+
+### Wallets
+ - [ethers-wallet](https://github.com/ethers-io/ethers-wallet) -- an amazingly small Ethereum wallet
+ - [metamask](https://metamask.io/) -- turns your browser into an Ethereum enabled browser =D
 
 ## Our Relationship with Ethereum & EthereumJS
 
