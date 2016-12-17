@@ -50,7 +50,7 @@ npm install --save ethjs-provider-http
 ```js
 const HttpProvider = require('ethjs-provider-http');
 const Eth = require('ethjs-query');
-const eth = new Eth(new HttpProvider('http://ropsten.infura.io'));
+const eth = new Eth(new HttpProvider('https://ropsten.infura.io'));
 
 eth.getBlockByNumber(45039930, cb);
 
